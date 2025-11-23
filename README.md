@@ -2,7 +2,7 @@
 
 **Ever wondered where the tweets you see are actually coming from?**
 
-This extension adds a whole new layer to your experience on X (formerly Twitter). It automatically shows a small country flag 🇺🇸 🇫🇷 🇯🇵 next to each username, giving you a quick peek at where the account is based.
+This extension adds a whole new layer to your experience on X (formerly Twitter). It automatically shows a small country flag 🇺🇸 🇲🇦 🇯🇵 next to each username, giving you a quick peek at where the account is based.
 
 It’s not just a flag — it’s a window into the knowing who's behind that account 👀
 
