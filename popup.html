@@ -13,10 +13,8 @@
       overflow: hidden;
       color: white;
       background: #0f0c29;
-      /* Fallback */
     }
 
-    /* Liquid Background Animation */
     .liquid-bg {
       position: fixed;
       top: -50%;
@@ -92,7 +90,6 @@
       font-weight: 500;
     }
 
-    /* Smooth Toggle Switch */
     .toggle-switch {
       position: relative;
       width: 44px;
@@ -177,6 +174,53 @@
         text-shadow: 0 0 15px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
       }
     }
+
+    /* Disabled State */
+    body.disabled-mode .liquid-bg {
+      filter: grayscale(100%) brightness(0.2);
+      animation-play-state: paused;
+    }
+
+    body.disabled-mode .glass-card {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(255, 255, 255, 0.02);
+    }
+
+    body.disabled-mode h1,
+    body.disabled-mode .author,
+    body.disabled-mode .rotating-flag {
+      color: #666;
+      text-shadow: none;
+      animation: none;
+      filter: grayscale(100%);
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .rotating-flag {
+      width: 24px;
+      height: auto;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+      animation: float 3s ease-in-out infinite;
+      border-radius: 2px;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-3px);
+      }
+    }
   </style>
 </head>
 
@@ -185,7 +229,10 @@
 
   <div class="glass-card">
     <div class="header">
-      <h1>Location Flag</h1>
+      <div class="title-container">
+        <img id="rotatingFlag" class="rotating-flag" src="https://flagcdn.com/w40/us.png" alt="Flag">
+        <h1>Flag</h1>
+      </div>
     </div>
 
     <div class="control-panel">
